@@ -2,6 +2,7 @@ import site
 site.addsitedir('/home/sab/env/lib/python2.6/site-packages')
 
 import sys
+sys.path.append('/home/sab/sab')
 sys.path.append('/home/sab/sab/sab')
 
 import os
