@@ -1,0 +1,38 @@
+<VirtualHost *:80>
+    ServerAdmin aduston@gmail.com
+
+    ServerName sponsorabigot.com
+    ServerAlias www.sponsorabigot.com
+
+    RewriteEngine on
+    RewriteCond %{HTTP_HOST} ^www\.sponsorabigot.com [NC]
+    RewriteRule ^(.*)$ http://sponsorabigot.com$1 [R=301,L]
+
+    LogLevel warn
+    ErrorLog /home/sab/log/apache.error.log
+    CustomLog /home/sab/log/apache.custom.log combined
+
+    WSGIDaemonProcess sab user=sab group=www-data threads=2
+    WSGIProcessGroup sab
+
+    WSGIScriptAlias / /home/sab/sab/deploy/sab.wsgi
+
+    Alias /site_media /home/sab/sab/sab/media/
+    <Location "/site_media">
+        SetHandler None
+        Order allow,deny
+        Allow from all
+    </Location>
+
+    Alias /favicon.ico /home/sab/sab/sab/media/images/favicon.ico
+    <Location "/favicon.ico">
+        SetHandler None
+    </Location>
+
+    Alias /media /home/sab/env/lib/python2.6/site-packages/django/contrib/admin/media/
+    <Location "/media">
+        SetHandler None
+        Order allow,deny
+        Allow from all
+    </Location>
+</VirtualHost>
