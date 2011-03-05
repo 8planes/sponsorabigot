@@ -6,12 +6,12 @@ env.user = 'sab'
 env.base_dir = '/home/sab'
 
 def update():
-    with cd('{0}/sab/deploy'.format(env.base_dir)):
+    with cd('{0}/sab'.format(env.base_dir)):
         run('git pull')
         env.warn_only = True
         run("find . -name '*.pyc' -print0 | xargs -0 rm")
         env.warn_only = False
-        run('touch {0}.wsgi'.format(env.user))
+        run('touch deploy/{0}.wsgi'.format(env.user))
 
 def syncdb(app_name=''):
     with cd('{0}/sab/sab'.format(env.base_dir)):
