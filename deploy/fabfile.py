@@ -1,4 +1,5 @@
 from fabric.api import run, put, sudo, env, cd, local
+from fabric.context_managers import settings
 import os
 
 env.hosts = ['8planes.com']
@@ -17,9 +18,6 @@ def syncdb(app_name=''):
     with cd('{0}/sab/sab'.format(env.base_dir)):
         run('{0}/env/bin/python manage.py syncdb {1} --settings=sab-settings'.format(env.base_dir, app_name))
 
-def su():
-    env.user = 'ubuntu'
-
 def bounce():
-    # to be used like "fab su bounce"
-    sudo('/etc/init.d/apache2 restart')
+    with settings(user="ubuntu"):
+        sudo('/etc/init.d/apache2 restart')
