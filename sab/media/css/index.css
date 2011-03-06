@@ -7,6 +7,14 @@ img.wbc {
    height: 345px;
 }
 
+#gowestboro {
+   position: absolute;
+   width: 600px;
+   height: 258px;
+   top: 105px;
+   left: 370px;
+}
+
 div.main {
    margin-top: 12px;
 }
