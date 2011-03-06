@@ -7,7 +7,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Adam Duston', 'adam@sponsorabigot.com'),
+    ('Adam Duston', 'adam@sponsorabigot.org'),
 )
 
 DATABASES = {

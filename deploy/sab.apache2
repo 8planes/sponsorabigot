@@ -1,12 +1,17 @@
 <VirtualHost *:80>
     ServerAdmin aduston@gmail.com
 
-    ServerName sponsorabigot.com
+    ServerName sponsorabigot.org
+    ServerAlias sponsorabigot.com
+    ServerAlias www.sponsorabigot.org
     ServerAlias www.sponsorabigot.com
 
     RewriteEngine on
-    RewriteCond %{HTTP_HOST} ^www\.sponsorabigot.com [NC]
-    RewriteRule ^(.*)$ http://sponsorabigot.com$1 [R=301,L]
+    RewriteCond %{HTTP_HOST} ^.*sponsorabigot.com [NC]
+    RewriteRule ^(.*)$ http://sponsorabigot.org$1 [R=301,L]
+    RewriteCond %{HTTP_HOST} ^www\.sponsorabigot.org [NC]
+    RewriteRule ^(.*)$ http://sponsorabigot.org$1 [R=301,L]
+
 
     LogLevel warn
     ErrorLog /home/sab/log/apache.error.log

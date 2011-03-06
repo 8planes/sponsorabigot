@@ -16,3 +16,10 @@ def update():
 def syncdb(app_name=''):
     with cd('{0}/sab/sab'.format(env.base_dir)):
         run('{0}/env/bin/python manage.py syncdb {1} --settings=sab-settings'.format(env.base_dir, app_name))
+
+def sudo():
+    env.user = 'ubuntu'
+
+def bounce():
+    # to be used like "fab sudo bounce"
+    sudo('/etc/init.d/apache restart')
