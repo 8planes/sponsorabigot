@@ -1,18 +1,26 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  </head>
-  <body>
-    Welcome to Sponsor A Bigot! More to come soon!
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-21848784-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = 'http://www.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  </body>
-</html>
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/index.css"/>
+{% endblock %}
+
+{% block content %}
+<div id="mainimage">
+  <img class="wbc" src="{{MEDIA_URL}}images/wbc.jpg" alt="WBC earning money for great causes"></img>
+</div>
+<div class="main">
+  <div class="side donate">
+    <h2>Donate to great causes for every minute the Westboro Baptist Church spends protesting!</h2>
+    <p>Finally, you can donate to your favorite LBGT organization or support US troops in combat for every minute the WBC spends protesting!</p>
+    <a href="{% url main:donate %}">I'm Interested</a>
+  </div>
+  <div class="side encourage">
+    <h2>Cheer them on to protest more and earn money for awesome causes!</h2>
+    <p>For every minute WBC spends protesting, money is going to great causes that promote equality and diversity. Let them know how much you appreciate their effort!</p>
+    <p>We're non-profit. All proceeds go toward supporting this site or other great causes. Visit our store now.</p>
+  </div>
+</div>
+<div class="share">
+  <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsponsorabigot.org&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+</div>
+{% endblock %}

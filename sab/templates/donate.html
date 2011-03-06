@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/donate.css"/>
+{% endblock %}
+
+{% block content %}
+<p>
+  We're still working on the site (just started on March 6) but until we're 
+  done you can congratulate WBC on their recent Supreme Court victory by 
+  donating to these great causes:
+<p>
+<ul>
+  <li><a href="https://www.uso.org/donate/" target="donate">United Service Organizations</a></li>
+  <li><a href="http://equalityacrossamerica.org/donate/" target="donate">Equality Across America</a></li>
+  <li><a href="http://www.thetaskforce.org/donate" target="donate">National Gay and Lesbian Task Force</a></li>
+</ul>
+<h2>Interested in supporting the development of this site?</h2>
+<p>
+  If you want to help with development costs for this site, 
+  please contact us at <a id="our_email" href="#"></a>. We will feature
+  corporate partners prominently in the bottom section of the landing 
+  page.
+</p>
+<p>
+  If you're a Python/Django developer, please join the project at 
+  github: <a href="http://github.com/8planes/sponsorabigot" target="repo">https://github.com/8planes/sponsorabigot</a>. It's open-source!
+</p>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{{MEDIA_URL}}js/donate.js"></script>
+{% endblock %}

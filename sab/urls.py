@@ -6,7 +6,6 @@ from django.conf import settings
 
 urlpatterns = patterns('',
     (r'', include('main.urls', namespace='main')),
-
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
 )
