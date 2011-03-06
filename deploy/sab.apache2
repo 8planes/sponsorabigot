@@ -22,6 +22,12 @@
 
     WSGIScriptAlias / /home/sab/sab/deploy/sab.wsgi
 
+    Alias /blog /home/sab/wordpress/
+    <Location "/blog">
+        Order allow,deny
+        Allow from all
+    </Location>
+
     Alias /site_media /home/sab/sab/sab/media/
     <Location "/site_media">
         SetHandler None
