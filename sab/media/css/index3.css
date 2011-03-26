@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url("/site_media/images/liz.jpg");
+  background-image: url("/site_media/images/liz2.jpg");
   background-position: right top;
   background-repeat: no-repeat;
   background-color: #16100e;
@@ -11,6 +11,8 @@ body {
   font-size: 34px; }
 
 .block {
+  opacity: 0.5;
+  background-color: white;
   margin-top: 20px;
   text-align: center;
   width: 430px;
