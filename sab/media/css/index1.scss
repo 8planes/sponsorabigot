@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    background-image:url('liz.jpg');
+    background-position: right top;
+    background-repeat:no-repeat;
+	background-color: rgb(22, 16, 14);
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+	color:white;
+    font-size: 34px;
+  }
+  
+  .block {
+    margin-top: 20px;
+	text-align: center;
+  	width: 430px;
+  	margin-left: 15px;
+  }
+
+@mixin softbutton {
+    background-color: #3ab100;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2a7f00), to(#3ab100));
+    background: -moz-linear-gradient(#f9f9f9, #dfdfdf );
+    border: 0px solid #adadad;
+    border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-family: Helvetica;
+    font-size: 25px;
+    text-shadow: 0 1px 1px #FFF;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px 10px 30px;
+    font-weight: bold;
+}
+
+@mixin softbuttonhover {
+    background-color: #3a9e02;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2a6901), to(#3a9e02));
+    background: -moz-linear-gradient(#2a6901, #3a9e02);
+}
+
+.some-button,
+button.some-button:active {
+    @include softbutton;
+}
+
+.some-button:hover {
+    @include softbuttonhover;
+}
