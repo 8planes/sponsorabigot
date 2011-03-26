@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url("liz.jpg");
+  background-image: url("/static/images/liz.jpg");
   background-position: right top;
   background-repeat: no-repeat;
   background-color: #16100e;
