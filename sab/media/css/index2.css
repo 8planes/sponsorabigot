@@ -1,0 +1,59 @@
+h1 {
+   margin: 18px 0;
+}
+
+h1.sub {
+   text-align: center;
+   font-size: 30px;
+   white-space: nowrap;
+}
+
+div.side {
+   border-radius: 12px;
+   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   -o-border-radius: 12px;
+   padding: 16px;
+   color: white;
+}
+
+div.side h2 {
+   font-size: 20px;
+   line-height: 22px;
+   margin-bottom: 12px;
+}
+
+div.donate {
+   background-color: #a8c15c;
+   float: left;
+   width: 441px;
+}
+
+div.donate a {
+   display: block;
+   background-color: #00598F;
+   color: white;
+   padding: 12px;
+   width: 180px;
+   margin: 18px auto 6px;
+   text-decoration: none;
+   border-radius: 8px;
+   -moz-border-radius: 8px;
+   -webkit-border-radius: 8px;
+   -o-border-radius: 8px;
+   text-align: center;
+   font-weight: bold;
+}
+
+div.donate a:hover {
+   text-decoration: underline;
+}
+
+div.encourage {
+   background-color: #6fbbaa;
+   margin-left: 485px;
+}
+
+p {
+   margin: 12px 0;
+}

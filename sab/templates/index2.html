@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/index2.css"/>
+{% endblock %}
+
+{% block content %}
+<h1>Westboro Baptist Church plans to protest Elizabeth Taylor's public memorial service.</h1>
+<img class="wbc" src="{{MEDIA_URL}}images/wbc-short.jpg" alt="WBC earning money"/>
+<h1 class="sub">We're hoping they stay out there as long as possible!</h1>
+<div class="main">
+  <div class="side donate">
+    <h2>Donate to the Elizabeth Taylor AIDS Foundation for every minute they spend protesting.</h2>
+    <p>Disgusted by Westboro? So are we! Turn their protest into a fundraising bonanza for the Elizabeth Taylor AIDS Foundation!</p>
+    <a href="{% url main:donate %}">I'm Interested</a>
+  </div>
+  <div class="side encourage">
+    <h2>Planning to be at the funeral? </h2>
+    <p>For every minute WBC spends protesting, more money is going to a great foundation! During the service, we'll be sending out live tweets with the amount of money they've raised.</p>
+    <p>Cheer them on to protest for as long as possible!</p>
+  </div>
+</div>
+
+{% endblock %}
