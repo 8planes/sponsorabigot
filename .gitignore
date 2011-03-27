@@ -3,3 +3,4 @@
 *.sqlite3
 sab-settings.py
 .DS_Store
+.sass-cache/
