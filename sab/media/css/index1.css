@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url("/site_media/images/liz.jpg");
+  background-image: url("../images/liz.jpg");
   background-position: right top;
   background-repeat: no-repeat;
   background-color: #16100e;
@@ -9,6 +9,12 @@ body {
   font-weight: bold;
   color: white;
   font-size: 34px; }
+
+body .h2 {
+  font-family: Helvetica;
+  font-weight: normal;
+  font-size: 20px;
+  padding: 15px; }
 
 .block {
   margin-top: 20px;

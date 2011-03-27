@@ -1,22 +1,37 @@
 body {
   margin: 0;
-  background-image: url("/site_media/images/liz2.jpg");
-  background-position: right top;
+  background-image: url("../images/liz2.jpg");
+  background-position: center top;
   background-repeat: no-repeat;
   background-color: #16100e;
   padding: 0;
   font-family: Arial, sans-serif;
   font-weight: bold;
-  color: white;
-  font-size: 34px; }
+  color: #1a1a1a;
+  font-size: 34px;
+  width: 960px; }
+
+body .h2 {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 20px;
+  color: #343434;
+  padding: 15px; }
 
 .block {
-  opacity: 0.5;
-  background-color: white;
-  margin-top: 20px;
+  /* Fallback for web browsers that doesn't support RGBa */
+  background-color: black;
+  /* RGBa with 0.5 opacity */
+  background-color: rgba(255, 255, 255, 0.5);
+  /* For IE 5.5 - 7*/
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
   text-align: center;
   width: 430px;
-  margin-left: 15px; }
+  height: 100%;
+  margin-left: 15px;
+  float: left; }
 
 .some-button,
 button.some-button:active {
