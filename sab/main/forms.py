@@ -9,12 +9,19 @@ class PledgeForm(ModelForm):
         fields = ('email', 'amount',)
 
     def save(self, request):
-        obj = Pledge(
-            ip_address=request.META.get('REMOTE_ADDR', 'no ip address'),
+        ip_address = request.META.get('REMOTE_ADDR', 'no ip address')
+        amount = self.cleaned_data['amount']
+        obj, created = Pledge.objects.get_or_create(
             email=self.cleaned_data['email'],
-            amount=self.cleaned_data['amount'],
-            confirm_code = str(uuid4()).replace('-', ''))
-        obj.save()
+            defaults = {
+                'ip_address': ip_address,
+                'amount': amount,
+                'confirm_code': str(uuid4()).replace('-', '')})
+        if not created:
+            # TODO: maybe send alert
+            obj.ip_address = ip_address
+            obj.amount = amount
+            obj.save()
         return obj
 
     def get_errors(self):
