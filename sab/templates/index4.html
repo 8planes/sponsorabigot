@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/index4.css"/>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{{MEDIA_URL}}js/index4.js"></script>
+{% endblock %}
+
+{% block content %}
+<div id="mainimage">
+  <img class="wbc" src="{{MEDIA_URL}}images/wbc.jpg" alt="WBC earning money for great causes"/>
+  <div class="leftdiv">
+    <p class="howmuch">How much time will they spend <br/>protesting Liz Taylor's funeral?</p>
+    <div class="bigpoint-container" id="hours">
+      <p class="bigpoint bigpoint-spacer">1 hour?</p>
+      <p class="bigpoint bigpoint-content">1 hour?</p>
+    </div>
+    <div class="bigpoint-container" id="dollars">
+      <p class="bigpoint bigpoint-spacer">$1,243</p>
+      <p class="bigpoint bigpoint-content">$1,243</p>
+    </div>
+    <p class="raised">Raised for the <br/>Elizabeth Taylor AIDS Foundation</p>
+  </div>
+</div>
+{% endblock %}
