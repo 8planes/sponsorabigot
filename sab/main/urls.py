@@ -1,4 +1,5 @@
 from django.conf.urls.defaults import *
+from main import views
 
 urlpatterns = patterns(
     '',
@@ -20,4 +21,10 @@ urlpatterns = patterns(
     url(r'^donate/$',
         'django.views.generic.simple.direct_to_template',
         {'template': 'donate.html'}, name="donate"),
+    url(r'^donate0/$', views.donate, name="donate0"),
+    url(r'^pledge/$', views.pledge, name="pledge"),
+    url(r'^confirm_pledge/(?P<confirm_code>\w+)/$', 
+        views.confirm_pledge, name="confirm_pledge"),
+    url(r'^confirm_fail/(?P<confirm_code>\w+)/$', 
+        views.confirm_fail, name="confirm_fail"),
 )

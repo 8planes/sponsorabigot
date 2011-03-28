@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/donate0.css"/>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{{MEDIA_URL}}js/jquery.watermark.min.js"></script>
+<script type="text/javascript" src="{{MEDIA_URL}}js/jquery.form.js"></script>
+<script type="text/javascript" src="{{MEDIA_URL}}js/donate0.js"></script>
+{% endblock %}
+
+{% block content %}
+<div id="firstPage">
+  <form action="{% url main:pledge %}" method="post" id="pledge_form">
+    {% csrf_token %}
+    <ul class="errorlist" id="email_errors"></ul>
+    <p><label for="id_email">My email is:</label>{{form.email}}</p>
+    <ul class="errorlist" id="amount_errors"></ul>
+    <p><label for="id_amount">
+        For every hour Westboro protests Liz Taylor's memorial service,
+        I pledge to donate to the Elizabeth Taylor AIDS Foundation:
+      </label>
+      {{form.amount}}
+    </p>
+    <button><span id="submit_label">Submit</span></button>
+  </form>
+</div>
+<div id="secondPage" style="display: none">
+  <p>
+    We have sent you an email confirmation. Please click on the link 
+    in the email to confirm that your email address is real.
+  </p>
+  <p>Think this is awesome? We agree! Please tell others.</p>
+  <a class="fb" href="#">Share on Facebook</a>
+  <a class="twitter" href="#">Share on Twitter</a>
+</div>
+{% endblock %}
