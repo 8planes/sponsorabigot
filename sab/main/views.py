@@ -10,11 +10,14 @@ import django.utils.simplejson as json
 from main.forms import PledgeForm
 from main import models
 from boto.ses import SESConnection
+from django.contrib.sites.models import Site
 
 def _send_email(email, amount, confirm_code):
     if not settings.DEBUG:
         context = {
-            'confirm_url': reverse('main:confirm_pledge', args=[confirm_code]) }
+            'confirm_url': 'http://{0}{1}'.format(
+                Site.objects.get_current().domain,
+                reverse('main:confirm_pledge', args=[confirm_code])) }
         connection = SESConnection(
             aws_access_key_id=settings.AWS_ACCESS_KEY,
             aws_secret_access_key=settings.AWS_SECRET_KEY)
