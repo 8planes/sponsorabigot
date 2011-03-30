@@ -27,9 +27,9 @@
   <div id="firstPage">
     <form action="{% url main:pledge %}" method="post" id="pledge_form">
       {% csrf_token %}
-      <ul class="errorlist" id="email_errors"></ul>
+      <div class="errorlist" id="email_errors"></div>
       <div class="formrow"><label for="id_email">My email is:</label>{{form.email}}</div>
-      <ul class="errorlist" id="amount_errors"></ul>
+      <div class="errorlist" id="amount_errors"></div>
       <div class="formrow">
         <label for="id_amount">
           For every hour Westboro protests Liz Taylor's memorial service,

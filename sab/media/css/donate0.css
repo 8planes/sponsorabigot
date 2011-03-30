@@ -39,7 +39,7 @@ p, .formrow {
    margin: 12px 0;
 }
 
-ul.errorlist {
+div.errorlist ul {
    display: none;
    background: url("../images/red_arrow.png") no-repeat scroll 20px bottom transparent;
    margin: 10px 0;

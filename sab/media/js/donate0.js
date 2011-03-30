@@ -6,8 +6,11 @@ jQuery(function($) {
                 $form.resetForm();
                 $form.parent().hide().next().fadeIn();
             } else {
+                $('div.errorlist', $form).empty();
                 for (key in data.errors) {
-                    var ul = $('#' + key + '_errors');
+                    var div = $('#' + key + '_errors');
+                    var ul = $('<ul/>');
+                    div.append(ul);
                     ul.html(['<li>', data.errors[key], '</li>'].join(''));
                     ul.fadeIn();
                 }
@@ -15,7 +18,6 @@ jQuery(function($) {
             }
         },
         beforeSubmit: function(formData, $form, options) {
-            $('ul.errorlist', $form).hide();
             $('#submit_label').text('Submitting...');
         }
     });
