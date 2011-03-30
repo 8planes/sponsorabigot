@@ -1,0 +1,90 @@
+h1 {
+   margin: 16px 0 32px;
+}
+
+div.explanation {
+   float: left;
+   width: 430px;
+}
+
+div.pledge {
+   margin-left: 450px;
+}
+
+div.round {
+   border-radius: 12px;
+   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   -o-border-radius: 12px;
+   padding: 16px;
+   color: white;
+}
+
+div.round h2 {
+   font-size: 20px;
+   line-height: 22px;
+   margin-bottom: 12px;
+}
+
+div.donate {
+   background-color: #a8c15c;
+}
+
+div.encourage {
+   margin-top: 20px;
+   background-color: #6fbbaa;
+}
+
+p {
+   margin: 12px 0;
+}
+
+ul.errorlist {
+   display: none;
+   background: url("../images/red_arrow.png") no-repeat scroll 20px bottom transparent;
+   margin: 10px 0;
+   padding: 0 0 7px;
+   width: 460px;
+}
+
+.errorlist li {
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -o-border-radius: 5px;
+   background: none repeat scroll 0 0 #D75B5B;
+   color: #FFFFFF;
+   font-weight: bold;
+   list-style: none outside none;
+   margin: 0;
+   padding: 10px 13px;
+}
+
+input, div#dollar_sign {
+}
+
+input {
+   padding: 14px 20px 12px;
+   -moz-border-radius: 5px;  
+   -webkit-border-radius: 5px;
+   -o-border-radius: 5px;
+   border: 1px blue solid;
+   width: 460px;
+   display: block;
+   line-height: 18px;
+   margin-top: 4px;
+   font-size: 18px;
+   font-weight: bold;
+   font-family: Helvetica, Arial, sans-serif;
+}
+
+input#id_amount {
+   width: 420px;
+   margin-left: 40px;
+}
+
+div#dollar_sign {
+   float: left;
+   width: 32px;
+   font-size: 34px;
+   text-align: right;
+}

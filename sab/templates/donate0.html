@@ -11,28 +11,45 @@
 {% endblock %}
 
 {% block content %}
-<div id="firstPage">
-  <form action="{% url main:pledge %}" method="post" id="pledge_form">
-    {% csrf_token %}
-    <ul class="errorlist" id="email_errors"></ul>
-    <p><label for="id_email">My email is:</label>{{form.email}}</p>
-    <ul class="errorlist" id="amount_errors"></ul>
-    <p><label for="id_amount">
-        For every hour Westboro protests Liz Taylor's memorial service,
-        I pledge to donate to the Elizabeth Taylor AIDS Foundation:
-      </label>
-      {{form.amount}}
-    </p>
-    <button><span id="submit_label">Submit</span></button>
-  </form>
+<h1>Since they're going to show up anyway, we hope they stay as long as possible.</h2>
+<div class="explanation">
+  <div class="round donate">
+    <h2>Donate to the Elizabeth Taylor AIDS Foundation for every hour they spend protesting.</h2>
+    <p>Disgusted by Westboro? So are we! Help us turn their protest into a fundraising bonanza for the <a href="http://www.elizabethtayloraidsfoundation.org/" target="etaf">Elizabeth Taylor AIDS Foundation</a>.</p>
+  </div>
+  <div class="round encourage">
+    <h2>Planning to be at the funeral? </h2>
+    <p>For every hour WBC spends protesting, more money is going to a great foundation! During the service, we'll be sending out live tweets with the amount of money they've raised.</p>
+    <p>Cheer them on to protest for as long as possible!</p>
+  </div>
 </div>
-<div id="secondPage" style="display: none">
-  <p>
-    We have sent you an email confirmation. Please click on the link 
-    in the email to confirm that your email address is real.
-  </p>
-  <p>Think this is awesome? We agree! Please tell others.</p>
-  <a class="fb" href="#">Share on Facebook</a>
-  <a class="twitter" href="#">Share on Twitter</a>
+<div class="pledge">
+  <div id="firstPage">
+    <form action="{% url main:pledge %}" method="post" id="pledge_form">
+      {% csrf_token %}
+      <ul class="errorlist" id="email_errors"></ul>
+      <p><label for="id_email">My email is:</label>{{form.email}}</p>
+      <ul class="errorlist" id="amount_errors"></ul>
+      <p><label for="id_amount">
+          For every hour Westboro protests Liz Taylor's memorial service,
+          I pledge to donate to the <a href="http://www.elizabethtayloraidsfoundation.org/" target="etaf">Elizabeth Taylor AIDS Foundation</a>:
+        </label>
+        <div>
+          <div id="dollar_sign">$</div>
+          {{form.amount}}
+        </div>
+      </p>
+      <button><span id="submit_label">Submit</span></button>
+    </form>
+  </div>
+  <div id="secondPage" style="display: none">
+    <p>
+      We have sent you an email confirmation. Please click on the link 
+      in the email to confirm that your email address is real.
+    </p>
+    <p>Think this is awesome? We agree! Please tell others.</p>
+    <a class="fb" href="#">Share on Facebook</a>
+    <a class="twitter" href="#">Share on Twitter</a>
+  </div>
 </div>
 {% endblock %}
