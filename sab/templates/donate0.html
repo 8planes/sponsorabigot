@@ -28,9 +28,10 @@
     <form action="{% url main:pledge %}" method="post" id="pledge_form">
       {% csrf_token %}
       <ul class="errorlist" id="email_errors"></ul>
-      <p><label for="id_email">My email is:</label>{{form.email}}</p>
+      <div class="formrow"><label for="id_email">My email is:</label>{{form.email}}</div>
       <ul class="errorlist" id="amount_errors"></ul>
-      <p><label for="id_amount">
+      <div class="formrow">
+        <label for="id_amount">
           For every hour Westboro protests Liz Taylor's memorial service,
           I pledge to donate to the <a href="http://www.elizabethtayloraidsfoundation.org/" target="etaf">Elizabeth Taylor AIDS Foundation</a>:
         </label>
@@ -38,7 +39,7 @@
           <div id="dollar_sign">$</div>
           {{form.amount}}
         </div>
-      </p>
+      </div>
       <button><span id="submit_label">Submit</span></button>
     </form>
   </div>
