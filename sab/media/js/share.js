@@ -18,7 +18,7 @@ function facebookURL(dollarAmount) {
         '&link=' + encodeURIComponent('http://sponsorabigot.org') +
         '&display=popup' +
         '&message=' + encodeURIComponent(getMessage(dollarAmount)) +
-        '&redirect_uri=' + POPUP_REDIRECT_URL;
+        '&redirect_uri=' + encodeURIComponent(POPUP_REDIRECT_URL);
 }
 
 function openFacebook() {
