@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block script %}
+<script type="text/javascript">
+  var dollarAmount = {{pledge.amount}};
+</script>
 <script type="text/javascript" src="{{MEDIA_URL}}js/share.js"></script>
 {% endblock %}
 
