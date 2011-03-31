@@ -93,6 +93,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
     "django.core.context_processors.i18n",
     "django.contrib.messages.context_processors.messages",
+    'context_processors.add_stuff',
 )
 
 INSTALLED_APPS = (
@@ -104,3 +105,5 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
 )
+
+FACEBOOK_APP_ID='178013785580180'

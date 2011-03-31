@@ -30,4 +30,7 @@ urlpatterns = patterns(
         views.confirm_pledge, name="confirm_pledge"),
     url(r'^confirm_fail/(?P<confirm_code>\w+)/$', 
         views.confirm_fail, name="confirm_fail"),
+    url(r'^closewindow/$',
+        'django.views.generic.simple.direct_to_template',
+        {'template': 'closewindow.html'}, name='closewindow')
 )

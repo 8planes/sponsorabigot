@@ -11,6 +11,7 @@ from main.forms import PledgeForm
 from main import models
 from boto.ses import SESConnection
 from django.contrib.sites.models import Site
+from django.utils.http import urlencode
 
 def _send_email(email, amount, confirm_code):
     if not settings.DEBUG:
