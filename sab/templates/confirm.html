@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block script %}
+<script type="text/javascript" src="{{MEDIA_URL}}js/share.js"></script>
+{% endblock %}
+
 {% block content %}
 <p>
   Hi, you have pledged to donate ${{pledge.amount}} to the 
@@ -7,9 +11,7 @@
   spends protesting Liz Taylor's funeral.
 </p>
 <p>
-  Thank you for being awesome with us.
+  Thank you for doing something great with us.
 <p>
-<p>
-  
-</p>
+{% include "_share.html" %}
 {% endblock %}

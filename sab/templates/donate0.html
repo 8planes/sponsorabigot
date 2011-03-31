@@ -46,14 +46,12 @@
       </p>
     </form>
   </div>
-  <div id="secondPage">
+  <div id="secondPage" style="display:none">
     <p>
       We have sent you an email confirmation. Please click on the link 
       in the email to confirm that your email address is real.
     </p>
-    <p>Think this is awesome? We agree! Please tell others.</p>
-    <a class="fb" href="javascript:void();">Share on Facebook</a>
-    <a class="twitter" href="javascript:void();">Share on Twitter</a>
+    {% include "_share.html" %}
   </div>
 </div>
 {% endblock %}

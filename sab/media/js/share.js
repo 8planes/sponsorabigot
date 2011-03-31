@@ -27,9 +27,23 @@ function openFacebook() {
         'post_to_fb', 'status=0,width=580,height=400');
 }
 
+function openTwitter() {
+    var msg = "Donating " + formatAmount(dollarAmount) + 
+        " to Elizabeth Taylor AIDS Foundation for every hour Westboro protests Liz's funeral #sponsorabigot";
+    var url = "http://twitter.com/share?text=" + encodeURIComponent(msg) +
+        "&url=" + encodeURIComponent('http://sponsorabigot.org');
+    window.open(
+        url,
+        'post_to_tw', 'status=0,width=580,height=400');
+}
+
 $(function() {
     $('a.fb').click(function(e) {
         e.preventDefault();
         openFacebook();
+    });
+    $('a.twitter').click(function(e) {
+        e.preventDefault();
+        openTwitter();
     });
 });
