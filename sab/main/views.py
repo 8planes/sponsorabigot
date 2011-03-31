@@ -12,6 +12,7 @@ from main import models
 from boto.ses import SESConnection
 from django.contrib.sites.models import Site
 from django.utils.http import urlencode
+from datetime import datetime
 
 def _send_email(email, amount, confirm_code):
     if not settings.DEBUG:
@@ -56,6 +57,8 @@ def confirm_pledge(request, confirm_code):
         pledge = models.Pledge.objects.get(confirm_code=confirm_code)
     except ObjectDoesNotExist:
         return redirect('main:confirm_fail', confirm_code=confirm_code)
+    pledge.confirm_date = datetime.now()
+    pledge.save()
     return render_to_response(
         'confirm.html',
         { 'pledge': pledge },
