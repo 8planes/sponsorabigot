@@ -1221,9 +1221,10 @@ h3#reply-title {
 #footer {
    background-color: #e16c63;
    border-top: 1px solid #bfbeb9;
-}
-#footer, #push {
    height: 39px;
+}
+#push {
+   height: 40px;
 }
 #colophon {
 	border-top: 4px solid #000;
