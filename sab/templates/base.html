@@ -27,6 +27,7 @@
         </div>
       </div>
       <div id="main" class="main-content">{% block content %}{% endblock %}</div>
+      <div style="clear:both">&nbsp;</div>
       <div id="push">&nbsp;</div>
     </div>
     <div id="footer">
@@ -47,6 +48,7 @@
       })();
       var FACEBOOK_APP_ID = '{{facebook_app_id}}';
       var POPUP_REDIRECT_URL = 'http://sponsorabigot.org{% url main:closewindow %}';
+      var FB_IMAGE = '{{MEDIA_URL}}images/fbimage.jpg';
     </script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     {% block script %}{% endblock %}    

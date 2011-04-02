@@ -7,11 +7,11 @@
 }
 
 #pledgepanel {
-   margin-top: 30px;
-   width: 440px;
+   float: left;
+   width: 400px;
 }
 
-#pledgepanel p {
+.sabpanel p {
    margin: 18px 0;
 }
 
@@ -25,7 +25,7 @@ input {
    font-family: inherit;
    font-size: 16px;
    padding: 4px;
-   width: 420px;
+   width: 390px;
    color: inherit;
    margin-top: 4px;
 }
@@ -39,7 +39,7 @@ input {
 
 #id_amount {
    margin-left: 16px;
-   width: 400px;
+   width: 374px;
 }
 
 .clear {
@@ -86,13 +86,13 @@ div.errormsg div {
 a.share {
    display: block;
    float: left;
-   margin-right: 18px;
    height: 47px;
    background: url('../images/buttons-etc.png') left no-repeat;
    text-decoration: none;
 }
 
 a.fb {
+   margin-right: 8px;
    width: 190px;
    background-position: left -295px;
 }
@@ -112,4 +112,12 @@ a.twitter:hover {
 
 a.share span {
    visibility: hidden;
+}
+
+#rightside {
+   margin-left: 480px;
+}
+
+.sabpanel {
+   margin-top: 30px;
 }

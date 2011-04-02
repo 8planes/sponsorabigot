@@ -16,6 +16,7 @@ function facebookURL(dollarAmount) {
     return 'http://www.facebook.com/dialog/feed' +
         '?app_id=' + FACEBOOK_APP_ID + 
         '&link=' + encodeURIComponent('http://sponsorabigot.org') +
+        '&picture=' + encodeURIComponent(FB_IMAGE) +
         '&display=popup' +
         '&message=' + encodeURIComponent(getMessage(dollarAmount)) +
         '&redirect_uri=' + encodeURIComponent(POPUP_REDIRECT_URL);
