@@ -13,12 +13,14 @@ function getMessage(dollarAmount) {
 
 function facebookURL(dollarAmount) {
     // see http://developers.facebook.com/docs/reference/dialogs/feed/
+    var description = "Help us turn Westboro's protest of Liz Taylor's public memorial into a fundraising bonanza for the Elizabeth Taylor AIDS Foundation.";
     return 'http://www.facebook.com/dialog/feed' +
         '?app_id=' + FACEBOOK_APP_ID + 
         '&link=' + encodeURIComponent('http://sponsorabigot.org') +
         '&picture=' + encodeURIComponent(FB_IMAGE) +
         '&display=popup' +
         '&message=' + encodeURIComponent(getMessage(dollarAmount)) +
+        '&description=' + encodeURIComponent(description) +
         '&redirect_uri=' + encodeURIComponent(POPUP_REDIRECT_URL);
 }
 
