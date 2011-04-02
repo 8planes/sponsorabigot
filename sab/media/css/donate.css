@@ -1,7 +1,55 @@
-ul, p {
-   margin: 12px 0;
+#middle .main-content {
+   background: #fff url('../images/et.jpg') right bottom no-repeat;
 }
 
-ul {
-   margin-left: 18px;
+#westboro {
+   position: absolute;
+   left: 10px;
+   bottom: -80px;
+   width: 800px;
+   height: 480px;
+   background: transparent url('../images/protestors.png') left bottom no-repeat;
+}
+
+#pledgepanel {
+   position: absolute;
+   left: 10px;
+   top: 30px;
+   width: 440px;
+}
+
+#pledgepanel p {
+   margin: 18px 0;
+}
+
+.formrow {
+   margin-top: 24px;
+}
+
+input {
+   display: block;
+   border: 1px #ccc solid;
+   font-family: inherit;
+   font-size: 16px;
+   padding: 4px;
+   width: 420px;
+   color: inherit;
+   margin-top: 4px;
+}
+
+#dollar_sign {
+   float: left;
+   margin-top: 4px;
+   width: 12px;
+   text-align: right;
+}
+
+#id_amount {
+   margin-left: 16px;
+   width: 400px;
+}
+
+.clear {
+   clear: both;
+   font-size: 2px;
 }

@@ -48,7 +48,7 @@ def pledge(request):
 
 def donate(request):
     return render_to_response(
-        'donate0.html',
+        'donate.html',
         { 'form': PledgeForm() },
         context_instance=RequestContext(request))
 

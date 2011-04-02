@@ -5,23 +5,12 @@
 {% endblock %}
 
 {% block content %}
-<div id="mainimage">
-  <img class="wbc" src="{{MEDIA_URL}}images/wbc.jpg" alt="WBC earning money for great causes"/>
-  <img id="gowestboro" src="{{MEDIA_URL}}images/gowestboro.png" alt="go westboro!"/>
-</div>
-<div class="main">
-  <div class="side donate">
-    <h2>Donate to great causes for every minute the Westboro Baptist Church spends protesting!</h2>
-    <p>Finally, you can donate to your favorite LGBT organization or support US troops in combat for every minute the WBC spends protesting!</p>
-    <a href="{% url main:donate %}">I'm Interested</a>
-  </div>
-  <div class="side encourage">
-    <h2>Cheer them on to protest more and earn money for awesome causes!</h2>
-    <p>For every minute WBC spends protesting, money is going to great causes that promote equality and diversity. Let them know how much you appreciate their effort!</p>
-    <p>We're non-profit. All proceeds go toward supporting this site or other great causes. Visit our store now.</p>
-  </div>
-</div>
-<div class="share">
-  <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsponsorabigot.org&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+<div id="westboro">&nbsp;</div>
+<div class="sabpanel" id="invitationpanel">
+  <h2>Westboro is planning to protest Elizabeth Taylor's public memorial service.</h2>
+  <p>
+    Pledge a donation to the Elizabeth Taylor AIDS Foundation for every hour they spend protesting.
+  </p>
+  <a class="button" href="{% url main:donate %}"><span>This sounds awesome</span></a>
 </div>
 {% endblock %}

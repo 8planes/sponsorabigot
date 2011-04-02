@@ -4,19 +4,123 @@
 }
 
 body {
-   font-family: verdana, sans-serif;
+   font-family: arial, sans-serif;
+   font-size: 16px;
+   color: #8a8a89;
+   position: relative;
 }
 
-#everything {
-   margin: 0 auto;
-   text-align: left;
+html, body {
+   height: 100%;
+}
+
+#header, #footer, #middle {
+   position: absolute;
+   left: 0px;
+   width: 100%;
+}
+
+#middle {
+   top: 62px;
+   bottom: 40px;
+   overflow: hidden;
+}
+
+#header {
+   top: 0px;
+   height: 60px;
+   background-color: #e9e8e2;
+   border-bottom: 1px solid #bfbeb9;
+}
+
+#footer {
+   bottom: 0px;
+   height: 40px;
+   background-color: #e16c63;
+   border-top: 1px solid #bfbeb9;
+}
+
+.main-content {
    width: 950px;
    padding: 0 10px;
+   margin: 0 auto;
 }
 
-#bottom {
-   clear: both;
-    color: #999999;
-    font-size: 10px;
-    padding: 20px 0 10px 28px;
+#middle .main-content {
+   min-height: 100%;
+   position: relative;
+}
+
+#header span {
+   visibility: hidden;
+}
+
+#header h1 {
+   height: 28px;
+   width: 270px;
+   background: transparent url('../images/buttons-etc.png') 0px -24px no-repeat;
+}
+
+#header .main-content {
+   padding-top: 20px;
+}
+
+#footer .main-content {
+   padding-top: 20px;
+   font-size: 10px;
+   color: #ccc;
+   text-align: right;
+}
+
+h2 {
+   font-size: 25px;
+   color: #fa6060;
+   font-weight: normal;
+}
+
+p {
+   color: #8a8a89;
+}
+
+.sabpanel {
+   background-color: rgba(240, 240, 240, 0.9);
+   border: 1px solid #ccc;
+   -moz-border-radius: 4px;
+   -webkit-border-radius: 4px;
+   -o-border-radius: 4px;
+   padding: 18px 28px;
+}
+
+a.button {
+   display: block;
+   height: 38px;
+   color: white;
+   background: transparent url('../images/buttons-etc.png') right -142px no-repeat;
+   padding-right: 7px;
+   text-decoration: none;
+}
+
+a.button span {
+   padding-left: 8px;
+   text-align: center;
+   display: block;
+   line-height: 38px;
+   background: transparent url('../images/buttons-etc.png') left -142px no-repeat;
+}
+
+a.button:hover {
+   background-position: right -105px;
+}
+
+a.button:hover span {
+   background-position: left -105px;
+}
+
+a.link {
+   color: #72cc48;
+   text-decoration: none;
+}
+
+a.link:hover {
+   text-decoration: underline;
 }

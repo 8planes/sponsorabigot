@@ -1,76 +1,24 @@
-#mainimage {
-   position: relative;
+#middle .main-content {
+   background: #fff url('../images/et.jpg') right bottom no-repeat;
 }
 
-img.wbc {
-   width: 950px;
-   height: 345px;
-}
-
-#gowestboro {
+#westboro {
    position: absolute;
-   width: 600px;
-   height: 258px;
-   top: 105px;
-   left: 370px;
+   left: 10px;
+   bottom: -80px;
+   width: 800px;
+   height: 480px;
+   background: transparent url('../images/protestors.png') left bottom no-repeat;
 }
 
-div.main {
-   margin-top: 12px;
+#invitationpanel {
+   position: absolute;
+   top: 30px;
+   left: 10;
+   width: 380px;
 }
 
-div.side {
-   border-radius: 12px;
-   -moz-border-radius: 12px;
-   -webkit-border-radius: 12px;
-   -o-border-radius: 12px;
-   padding: 16px;
-   color: white;
+#invitationpanel p {
+   margin: 24px 0;
 }
 
-div.side h2 {
-   font-size: 20px;
-   line-height: 22px;
-   margin-bottom: 12px;
-}
-
-div.donate {
-   background-color: #a8c15c;
-   float: left;
-   width: 441px;
-}
-
-div.donate a {
-   display: block;
-   background-color: #00598F;
-   color: white;
-   padding: 12px;
-   width: 180px;
-   margin: 18px auto 6px;
-   text-decoration: none;
-   border-radius: 8px;
-   -moz-border-radius: 8px;
-   -webkit-border-radius: 8px;
-   -o-border-radius: 8px;
-   text-align: center;
-   font-weight: bold;
-}
-
-div.donate a:hover {
-   text-decoration: underline;
-}
-
-div.encourage {
-   background-color: #6fbbaa;
-   margin-left: 485px;
-}
-
-p {
-   margin: 12px 0;
-}
-
-div.share {
-   margin-top: 18px;
-   padding-left: 20px;
-   clear: both;
-}
