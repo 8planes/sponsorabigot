@@ -23,3 +23,5 @@ DATABASES = {
 
 AWS_ACCESS_KEY = ''
 AWS_SECRET_KEY = ''
+
+MEDIA_URL = 'http://sponsorabigot.org/site_media/'

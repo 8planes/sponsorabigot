@@ -1,20 +1,13 @@
-#middle .main-content {
+#footer-bg {
    background: #fff url('../images/et.jpg') right bottom no-repeat;
 }
 
-#westboro {
-   position: absolute;
-   left: 10px;
-   bottom: -80px;
-   width: 800px;
-   height: 480px;
-   background: transparent url('../images/protestors.png') left bottom no-repeat;
+#footer-bg2 {
+   background: transparent url('../images/protestors.png') left 408px no-repeat;
 }
 
 #pledgepanel {
-   position: absolute;
-   left: 10px;
-   top: 30px;
+   margin-top: 30px;
    width: 440px;
 }
 
@@ -52,4 +45,71 @@ input {
 .clear {
    clear: both;
    font-size: 2px;
+}
+
+div.button-container {
+   margin-top: 10px;
+   padding-top: 10px;
+}
+
+a.button span {
+   padding: 0 8px 0 16px;
+}
+
+a.button {
+   float: right;
+}
+
+.input-container {
+   position: relative;
+   overflow: visible;
+}
+
+div.errormsg {
+   position: absolute;
+   right: 20px;
+   bottom: 32px;
+   padding-bottom: 5px;
+   background: url('../images/error.png') bottom right no-repeat;
+}
+
+div.errormsg div {
+   background-color: #cfcec7;
+   border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -o-border-radius: 5px;
+   padding: 2px 8px;
+   color: white;
+}
+
+a.share {
+   display: block;
+   float: left;
+   margin-right: 18px;
+   height: 47px;
+   background: url('../images/buttons-etc.png') left no-repeat;
+   text-decoration: none;
+}
+
+a.fb {
+   width: 190px;
+   background-position: left -295px;
+}
+
+a.fb:hover {
+   background-position: left -342px;
+}
+
+a.twitter {
+   width: 186px;
+   background-position: left -201px;
+}
+
+a.twitter:hover {
+   background-position: left -248px;
+}
+
+a.share span {
+   visibility: hidden;
 }

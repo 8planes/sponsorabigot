@@ -1,25 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml" 
+      xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta property="og:title" content="Sponsor a Bigot"/>
+    <meta property="og:type" content="cause"/>
+    <meta property="og:url" content="http://sponsorabigot.org/"/>
+    <meta property="og:image" content="{{MEDIA_URL}}images/fbimage.jpg"/>
+    <meta property="og:site_name" content="Sponsor a Bigot"/>
+    <meta property="fb:app_id" content="{{facebook_app_id}}"/>
+    <meta property="og:description"
+          content="Help us turn Westboro's protest of Liz Taylor's public funeral 
+                   into a fundraising bonanza for the Elizabeth Taylor AIDS 
+                   Foundation."/>
     <title>Sponsor a Bigot</title>
     <link rel="stylesheet" href="{{MEDIA_URL}}css/base.css"/>
     {% block css %}{% endblock %}
   </head>
   <body>
-    <div id="header">
-      <div class="main-content">
-        <h1><span>Sponsor a Bigot</span></h1>
+    <div id="wrapper">
+      <div id="header">
+        <div class="main-content">
+          <h1><span>Sponsor a Bigot</span></h1>
+        </div>
       </div>
-    </div>
-    <div id="middle">
-      <div class="main-content">
-        {% block content %}{% endblock %}
-      </div>
+      <div id="main" class="main-content">{% block content %}{% endblock %}</div>
+      <div id="push">&nbsp;</div>
     </div>
     <div id="footer">
       <div class="main-content">
+        <div id="footer-bg">&nbsp;</div>
+        <div id="footer-bg2">&nbsp;</div>
         <span>&#169; 2011 Adam Duston. All rights reserved.</span>
       </div>
     </div>

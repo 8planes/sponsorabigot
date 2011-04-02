@@ -7,38 +7,54 @@
 {% block content %}
 <div id="westboro">&nbsp;</div>
 <div id="pledgepanel" class="sabpanel">
-  <h2>
-    Since they're going to show up anyway, we hope they stay as long as possible.
-  </h2>
-  <p>
-    Disgusted by Westboro? So are we! Help us turn their protest into a
-    fundraising bonanza for the 
-    <a href="http://elizabethtayloraidsfoundation.org/" target="etaf" class="link">Elizabeth Taylor AIDS Foundation</a>.
-  </p>
-  <form action="{% url main:pledge %}" method="post" id="pledge_form">
-    {% csrf_token %}
-    <div class="errorlist" id="email_errors"></div>
-    <div class="formrow">
-      <label for="id_email">Email:</label>
-      {{form.email}}
-    </div>
-    <div class="errorlist" id="amount_errors"></div>
-    <div class="formrow">
-      <label for="id_amount">
-        For every hour Westboro protests Liz Taylor's memorial service,
-        I pledge to donate to the <a href="http://www.elizabethtayloraidsfoundation.org/" target="etaf" class="link">Elizabeth Taylor AIDS Foundation</a>:
-      </label>
-      <div>
-        <div id="dollar_sign">$</div>
-        {{form.amount}}
+  <div id="firstPage">
+    <h2>
+      Since they're going to show up anyway, we hope they stay as long as possible.
+    </h2>
+    <p>
+      Disgusted by Westboro? So are we! Help us turn their protest into a
+      fundraising bonanza for the 
+      <a href="http://elizabethtayloraidsfoundation.org/" target="etaf" class="link">Elizabeth Taylor AIDS Foundation</a>.
+    </p>
+    <form action="{% url main:pledge %}" method="post" id="pledge_form">
+      {% csrf_token %}
+      <div class="formrow">
+        <label for="id_email">Email:</label>
+        <div class="input-container">
+          <div class="errormsg" style="display:none" id="email_errors"><div></div></div>
+          {{form.email}}
+        </div>
       </div>
-    </div>
-    <button><span id="submit_label">Submit</span></button>
-    <div class="clear">&nbsp;</div>
-  </form>
+      <div class="formrow">
+        <label for="id_amount">
+          For every hour Westboro protests Liz Taylor's memorial service,
+          I pledge to donate to the <a href="http://www.elizabethtayloraidsfoundation.org/" target="etaf" class="link">Elizabeth Taylor AIDS Foundation</a>:
+        </label>
+        <div class="input-container">
+          <div class="errormsg" style="display:none" id="amount_errors"><div></div></div>
+          <div id="dollar_sign">$</div>
+          {{form.amount}}
+        </div>
+      </div>
+      <div class="button-container">
+        <a class="button" href="javascript:void();"><span id="submit_label">Submit</span></a>
+        <div class="clear">&nbsp;</div>
+      </div>
+    </form>
+  </div>
+  <div id="secondPage" style="display:none">
+    <h2>Thank you for being part of the solution.</h2>
+    <p>
+      We have sent you an email confirmation. Please click on the link 
+      in the email to confirm that your email address is real.
+    </p>
+    {% include "_share.html" %}
+  </div>
 </div>
 {% endblock %}
 
 {% block script %}
-
+<script type="text/javascript" src="{{MEDIA_URL}}js/share.js"></script>
+<script type="text/javascript" src="{{MEDIA_URL}}js/jquery.form.js"></script>
+<script type="text/javascript" src="{{MEDIA_URL}}js/donate.js"></script>
 {% endblock %}

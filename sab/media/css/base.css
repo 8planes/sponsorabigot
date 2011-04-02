@@ -7,35 +7,29 @@ body {
    font-family: arial, sans-serif;
    font-size: 16px;
    color: #8a8a89;
-   position: relative;
 }
 
 html, body {
    height: 100%;
 }
 
-#header, #footer, #middle {
-   position: absolute;
-   left: 0px;
-   width: 100%;
+#wrapper {
+   min-height: 100%;
+   height: auto !important;
+   height: 100%;
+   margin: 0 auto -41px;
 }
 
-#middle {
-   top: 62px;
-   bottom: 40px;
-   overflow: hidden;
+#footer, #push {
+   height: 40px;
 }
 
 #header {
-   top: 0px;
-   height: 60px;
    background-color: #e9e8e2;
    border-bottom: 1px solid #bfbeb9;
 }
 
 #footer {
-   bottom: 0px;
-   height: 40px;
    background-color: #e16c63;
    border-top: 1px solid #bfbeb9;
 }
@@ -46,9 +40,8 @@ html, body {
    margin: 0 auto;
 }
 
-#middle .main-content {
-   min-height: 100%;
-   position: relative;
+#main {
+   padding-bottom: 20px;
 }
 
 #header span {
@@ -62,14 +55,30 @@ html, body {
 }
 
 #header .main-content {
-   padding-top: 20px;
+   padding: 20px 0 12px;
 }
 
 #footer .main-content {
-   padding-top: 20px;
    font-size: 10px;
    color: #ccc;
    text-align: right;
+   position: relative;
+}
+
+#footer-bg, #footer-bg2 {
+   position: absolute;
+   height: 700px;
+   top: -700px;
+   left: 0;
+   width: 950px;
+}
+
+#footer-bg {
+   z-index: -2;
+}
+
+#footer-bg2 {
+   z-index: -1;
 }
 
 h2 {
@@ -95,17 +104,18 @@ a.button {
    display: block;
    height: 38px;
    color: white;
-   background: transparent url('../images/buttons-etc.png') right -142px no-repeat;
+   background: url('../images/buttons-etc.png') right -142px no-repeat;
    padding-right: 7px;
    text-decoration: none;
 }
 
 a.button span {
-   padding-left: 8px;
+   padding-left: 7px;
    text-align: center;
    display: block;
+   height: 38px;
    line-height: 38px;
-   background: transparent url('../images/buttons-etc.png') left -142px no-repeat;
+   background: url('../images/buttons-etc.png') left -142px no-repeat;
 }
 
 a.button:hover {
@@ -124,3 +134,4 @@ a.link {
 a.link:hover {
    text-decoration: underline;
 }
+

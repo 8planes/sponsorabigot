@@ -7,14 +7,20 @@
 <script type="text/javascript" src="{{MEDIA_URL}}js/share.js"></script>
 {% endblock %}
 
+{% block css %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/donate.css"/>
+{% endblock %}
+
 {% block content %}
-<p>
-  Hi, you have pledged to donate ${{pledge.amount}} to the 
-  Elizabeth Taylor AIDS Foundation for every hour Westboro 
-  spends protesting Liz Taylor's funeral.
-</p>
-<p>
-  Thank you for doing something great with us.
-<p>
-{% include "_share.html" %}
+<div id="pledgepanel" class="sabpanel">
+  <p>
+    Hi, you have pledged to donate ${{pledge.amount}} to the 
+    Elizabeth Taylor AIDS Foundation for every hour Westboro 
+    spends protesting Liz Taylor's funeral.
+  </p>
+  <p>
+    Thank you.
+  <p>
+    {% include "_share.html" %}
+</div>
 {% endblock %}

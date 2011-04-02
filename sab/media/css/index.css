@@ -1,20 +1,13 @@
-#middle .main-content {
+#footer-bg {
    background: #fff url('../images/et.jpg') right bottom no-repeat;
 }
 
-#westboro {
-   position: absolute;
-   left: 10px;
-   bottom: -80px;
-   width: 800px;
-   height: 480px;
-   background: transparent url('../images/protestors.png') left bottom no-repeat;
+#footer-bg2 {
+   background: transparent url('../images/protestors.png') left 408px no-repeat;
 }
 
 #invitationpanel {
-   position: absolute;
-   top: 30px;
-   left: 10;
+   margin-top: 30px;
    width: 380px;
 }
 
