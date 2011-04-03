@@ -125,6 +125,7 @@ a.button:hover {
 
 a.button:hover span {
    background-position: left -104px;
+   color: #6E6D6D;
 }
 
 a.link {
