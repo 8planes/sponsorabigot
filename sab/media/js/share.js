@@ -8,7 +8,7 @@ function formatAmount(dollarAmount) {
 function getMessage(dollarAmount) {
     return "I am donating " + formatAmount(dollarAmount) + " to " +
         "the Elizabeth Taylor AIDS Foundation for every hour " +
-        "Westboro spends protesting. http://goo.gl/XwDpl";
+        "Westboro spends protesting.";
 }
 
 function facebookURL(dollarAmount) {
