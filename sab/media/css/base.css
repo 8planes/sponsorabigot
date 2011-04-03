@@ -135,3 +135,6 @@ a.link:hover {
    text-decoration: underline;
 }
 
+#copyright {
+   padding-top: 24px;
+}
