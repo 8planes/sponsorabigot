@@ -94,20 +94,20 @@ a.share {
 a.fb {
    margin-right: 8px;
    width: 190px;
-   background-position: left -295px;
+   background-position: left -317px;
 }
 
 a.fb:hover {
-   background-position: left -342px;
+   background-position: left -364px;
 }
 
 a.twitter {
    width: 186px;
-   background-position: left -201px;
+   background-position: left -219px;
 }
 
 a.twitter:hover {
-   background-position: left -248px;
+   background-position: left -266px;
 }
 
 a.share span {

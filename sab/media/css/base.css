@@ -104,7 +104,7 @@ a.button {
    display: block;
    height: 38px;
    color: white;
-   background: url('../images/buttons-etc.png') right -142px no-repeat;
+   background: url('../images/buttons-etc.png') right -465px no-repeat;
    padding-right: 7px;
    text-decoration: none;
 }
@@ -115,15 +115,15 @@ a.button span {
    display: block;
    height: 38px;
    line-height: 38px;
-   background: url('../images/buttons-etc.png') left -142px no-repeat;
+   background: url('../images/buttons-etc.png') left -143px no-repeat;
 }
 
 a.button:hover {
-   background-position: right -105px;
+   background-position: right -426px;
 }
 
 a.button:hover span {
-   background-position: left -105px;
+   background-position: left -104px;
 }
 
 a.link {
