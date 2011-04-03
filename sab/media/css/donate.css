@@ -122,3 +122,20 @@ a.share span {
    margin-top: 30px;
 }
 
+#fb-follow {
+   width: 190px;
+}
+
+#tw-follow {
+   float: right;
+   margin-top: 10px;
+   display: block;
+   width: 200px;
+   height: 37px;
+   text-decoration: none;
+   background: url('../images/twitter_logo.png') no-repeat;
+}
+
+#tw-follow span {
+   visibility: hidden;
+}
