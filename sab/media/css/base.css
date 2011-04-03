@@ -92,12 +92,15 @@ p {
 }
 
 .sabpanel {
-   background-color: rgba(240, 240, 240, 0.9);
+   background: rgb(240, 240, 240);
+   background: rgba(240, 240, 240, 0.9);
    border: 1px solid #ccc;
    -moz-border-radius: 4px;
    -webkit-border-radius: 4px;
    -o-border-radius: 4px;
    padding: 18px 28px;
+   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#F0F0F0F3 endColorstr=#F0F0F0F3);
+   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F0F0F0F3, endColorstr=#F0F0F0F3)";
 }
 
 a.button {
