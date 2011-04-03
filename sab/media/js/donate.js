@@ -9,8 +9,8 @@ jQuery(function($) {
     $('#pledge_form').ajaxForm({
         dataType: 'json',
         success: function(data, status, xhr, $form) {
-            dollarAmount = parseFloat($('#id_amount').val());
             if (data.success){
+                dollarAmount = parseFloat($('#id_amount').val());
                 $form.resetForm();
                 $form.parent().hide().next().fadeIn();
             } else {
