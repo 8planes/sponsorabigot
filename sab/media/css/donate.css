@@ -1,9 +1,5 @@
-#footer-bg {
-   background: #fff url('../images/et.jpg') right bottom no-repeat;
-}
-
 #footer-bg2 {
-   background: transparent url('../images/protestors.png') left 408px no-repeat;
+   background: transparent url('../images/protestors.png') 140px 380px no-repeat;
 }
 
 #pledgepanel {
