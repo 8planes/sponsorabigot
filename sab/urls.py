@@ -4,8 +4,11 @@ from django.contrib import admin
 admin.autodiscover()
 from django.conf import settings
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     (r'', include('main.urls', namespace='main')),
+    url(r'^robots.txt', 'django.views.generic.simple.direct_to_template', 
+        {'template': 'robots.txt', 'mimetype': 'text/plain'}),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
 )
