@@ -34,14 +34,21 @@ def _send_email(email, amount, confirm_code):
         print('Sent email to {0} about {1} with confirm code {2}'.format(
                 email, amount, confirm_code))
 
-def index(request):
+def _add_amounts_to_context(ctx=None):
+    if ctx is None:
+        ctx = {}
     total_amount = count_cache.get_total_amount()
     amount_pct = max(5, min(100, int(100 * total_amount / settings.FUNDING_GOAL)))
+    ctx.update({
+            'amount': total_amount,
+            'amount_goal': settings.FUNDING_GOAL,
+            'amount_pct': amount_pct })
+    return ctx
+
+def index(request):
     return render_to_response(
         'index.html',
-        { 'amount': total_amount,
-          'amount_goal': settings.FUNDING_GOAL,
-          'amount_pct': amount_pct },
+        _add_amounts_to_context(),
         context_instance=RequestContext(request))
 
 def pledge(request):
@@ -59,7 +66,7 @@ def pledge(request):
 def donate(request):
     return render_to_response(
         'donate.html',
-        { 'form': PledgeForm() },
+        _add_amounts_to_context({ 'form': PledgeForm() }),
         context_instance=RequestContext(request))
 
 def confirm_pledge(request, confirm_code):
@@ -71,10 +78,11 @@ def confirm_pledge(request, confirm_code):
     pledge.save()
     return render_to_response(
         'confirm.html',
-        { 'pledge': pledge },
+        _add_amounts_to_context({ 'pledge': pledge }),
         context_instance=RequestContext(request))
 
 def confirm_fail(request, confirm_code):
     return render_to_response(
         'confirm_fail.html',
+        _add_amounts_to_context(),
         context_instance=RequestContext(request))
