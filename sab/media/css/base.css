@@ -151,25 +151,3 @@ a.link:hover {
    color: #b1afaf;
    margin-bottom: 2px;
 }
-
-.amount-bar-shell {
-   font-size: 2px;
-   width: 256px;
-   height: 8px;
-   background: url('../images/buttons-etc.png') left -205px no-repeat;
-   padding: 2px;
-}
-
-.amount-bar-container {
-   width: 256px;
-}
-
-.amount-bar-outer {
-   background: url('../images/buttons-etc.png') right -504px no-repeat;
-   padding: 0 5px 0 0;
-}
-
-.amount-bar-inner {
-   height: 8px;
-   background: url('../images/buttons-etc.png') left -193px no-repeat;
-}

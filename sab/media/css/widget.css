@@ -1,0 +1,20 @@
+.widget-container {
+   width: 280px;
+}
+
+h2 {
+   font-size: 16px;
+}
+
+p {
+   font-size: 14px;
+   margin: 8px 0;
+}
+
+.amount-bar-shell {
+   margin: 0 auto;
+}
+
+p.amount {
+   text-align: center;
+}

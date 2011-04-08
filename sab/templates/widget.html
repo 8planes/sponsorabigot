@@ -1,0 +1,24 @@
+{% load humanize %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml" 
+      xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Sponsor a Bigot</title>
+    <link rel="stylesheet" href="{{MEDIA_URL}}css/base.css"/>
+    <link rel="stylesheet" href="{{MEDIA_URL}}css/amount_bar.css"/>
+    <link rel="stylesheet" href="{{MEDIA_URL}}css/widget.css"/>
+  </head>
+  <body>
+    <div class="widget-container">
+      <h2>Westboro will protest Elizabeth Taylor's public memorial service.</h2>
+      <p>Pledge a donation to the Elizabeth Taylor AIDS Foundation for every hour they spend protesting.</p>
+      {% include "_amount_bar.html" %}
+      <p class="amount">{{amount|intcomma}} of ${{amount_goal|intcomma}} raised so far (per hour)</p>
+      <a class="button" target="_blank" href="http://sponsorabigot.org"><span>I'm in</span></a>
+    </div>
+  </body>
+</html>

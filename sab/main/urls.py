@@ -12,5 +12,7 @@ urlpatterns = patterns(
         views.confirm_fail, name="confirm_fail"),
     url(r'^closewindow/$',
         'django.views.generic.simple.direct_to_template',
-        {'template': 'closewindow.html'}, name='closewindow')
+        {'template': 'closewindow.html'}, name='closewindow'),
+    url(r'^widget/$', views.widget, name='widget'),
+
 )

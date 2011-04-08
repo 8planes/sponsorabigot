@@ -51,6 +51,12 @@ def index(request):
         _add_amounts_to_context(),
         context_instance=RequestContext(request))
 
+def widget(request):
+    return render_to_response(
+        'widget.html',
+        _add_amounts_to_context(),
+        context_instance=RequestContext(request))
+
 def pledge(request):
     form = PledgeForm(request.POST)
     if form.is_valid():
