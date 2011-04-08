@@ -3,9 +3,7 @@ from main import views
 
 urlpatterns = patterns(
     '',
-    url(r'^$',
-        'django.views.generic.simple.direct_to_template', 
-        {'template': 'index.html'}),
+    url(r'^$', views.index, name="index"),
     url(r'^0/$',
         'django.views.generic.simple.direct_to_template',
         {'template': 'index0.html'}),

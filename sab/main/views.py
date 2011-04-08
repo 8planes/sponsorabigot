@@ -8,7 +8,7 @@ from django.core.urlresolvers import reverse
 from django.core.exceptions import ObjectDoesNotExist
 import django.utils.simplejson as json
 from main.forms import PledgeForm
-from main import models
+from main import models, count_cache
 from boto.ses import SESConnection
 from django.contrib.sites.models import Site
 from django.utils.http import urlencode
@@ -33,6 +33,16 @@ def _send_email(email, amount, confirm_code):
     else:
         print('Sent email to {0} about {1} with confirm code {2}'.format(
                 email, amount, confirm_code))
+
+def index(request):
+    total_amount = count_cache.get_total_amount()
+    amount_pct = max(5, min(100, int(100 * total_amount / settings.FUNDING_GOAL)))
+    return render_to_response(
+        'index.html',
+        { 'amount': total_amount,
+          'amount_goal': settings.FUNDING_GOAL,
+          'amount_pct': amount_pct },
+        context_instance=RequestContext(request))
 
 def pledge(request):
     form = PledgeForm(request.POST)

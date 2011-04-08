@@ -104,6 +104,11 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.admin',
+    'django.contrib.humanize',
 )
 
-FACEBOOK_APP_ID='178013785580180'
+FACEBOOK_APP_ID = '178013785580180'
+
+CACHE_BACKEND = 'locmem://'
+
+FUNDING_GOAL = 10000

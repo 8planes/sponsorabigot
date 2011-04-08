@@ -8,3 +8,4 @@ class Pledge(models.Model):
     confirm_date = models.DateTimeField(null=True)
     confirm_code = models.CharField(
         max_length=255, blank=False, unique=True, db_index=True)
+

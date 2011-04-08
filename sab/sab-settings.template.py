@@ -25,3 +25,5 @@ AWS_ACCESS_KEY = ''
 AWS_SECRET_KEY = ''
 
 MEDIA_URL = 'http://sponsorabigot.org/site_media/'
+
+CACHE_BACKEND = 'memcached://127.0.0.1:11211/'

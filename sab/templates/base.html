@@ -1,3 +1,5 @@
+{% load humanize %}
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
@@ -32,6 +34,10 @@
     <div id="wrapper">
       <div id="header">
         <div class="main-content">
+          <div id="headerright">
+            <p>{{amount|intcomma}} of ${{amount_goal|intcomma}} raised</p>
+            {% include "_amount_bar.html" %}
+          </div>
           <h1><span>Sponsor a Bigot</span></h1>
         </div>
       </div>
