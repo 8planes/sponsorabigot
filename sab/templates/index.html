@@ -4,6 +4,10 @@
 <link rel="stylesheet" href="{{MEDIA_URL}}css/index.css"/>
 {% endblock %}
 
+{% block script %}
+<script type="text/javascript" src="{{MEDIA_URL}}js/share.js"></script>
+{% endblock %}
+
 {% block content %}
 <div id="westboro">&nbsp;</div>
 <div class="sabpanel" id="invitationpanel">
@@ -12,5 +16,10 @@
     Pledge a donation to the Elizabeth Taylor AIDS Foundation for every hour they spend protesting.
   </p>
   <a class="button" href="{% url main:donate %}"><span>I'm in</span></a>
+  <div class="share">
+    <a class="share fb fb-sharesite" href="javascript:void();"><span>Share on Facebook</span></a>
+    <a class="share twitter tw-sharesite" href="javascript:void();"><span>Share on Twitter</span></a>
+  </div>
+  <div class="clear">&nbsp;</div>
 </div>
 {% endblock %}

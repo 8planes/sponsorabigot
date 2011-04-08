@@ -79,36 +79,6 @@ div.errormsg div {
    color: white;
 }
 
-a.share {
-   display: block;
-   float: left;
-   height: 47px;
-   background: url('../images/buttons-etc.png') left no-repeat;
-   text-decoration: none;
-}
-
-a.fb {
-   margin-right: 8px;
-   width: 190px;
-   background-position: left -317px;
-}
-
-a.fb:hover {
-   background-position: left -364px;
-}
-
-a.twitter {
-   width: 186px;
-   background-position: left -219px;
-}
-
-a.twitter:hover {
-   background-position: left -266px;
-}
-
-a.share span {
-   visibility: hidden;
-}
 
 #rightside {
    margin-left: 480px;
