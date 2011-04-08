@@ -1,8 +1,5 @@
 function formatAmount(dollarAmount) {
-    var cents = (Math.floor(dollarAmount * 100) % 100) + '';
-    if (cents.length < 2)
-        cents = '0' + cents;
-    return '$' + Math.floor(dollarAmount) + "." + cents;
+    return '$' + Math.floor(dollarAmount);
 }
 
 function getFBDonateMessage() {
