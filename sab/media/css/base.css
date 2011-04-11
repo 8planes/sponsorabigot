@@ -144,6 +144,7 @@ a.link:hover {
 #footer .follow-links {
    float: left;
    margin-top: 3px;
+   width: 150px;
 }
 
 #headerright {
