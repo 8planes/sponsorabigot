@@ -1,8 +1,10 @@
 from django.conf.urls.defaults import *
-
 from django.contrib import admin
-admin.autodiscover()
 from django.conf import settings
+from django.views.generic.simple import redirect_to
+
+admin.autodiscover()
+
 
 urlpatterns = patterns(
     '',
