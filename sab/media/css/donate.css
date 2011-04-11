@@ -92,6 +92,11 @@ div.errormsg div {
    margin-top: 30px;
 }
 
+#rightside .follow-links {
+   width: 180px;
+   float: right;
+}
+
 #rightside .follow-links p {
    margin: 0 6px 0 0;
    color: #8A8A89;
