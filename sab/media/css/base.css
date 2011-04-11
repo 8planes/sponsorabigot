@@ -44,14 +44,17 @@ html, body {
    padding-bottom: 20px;
 }
 
-#header span {
-   visibility: hidden;
-}
-
 #header h1 {
    height: 28px;
    width: 270px;
    background: transparent url('../images/buttons-etc.png') 0px -24px no-repeat;
+}
+
+#header span {
+   display: block;
+   width: 270px;
+   height: 28px;
+   visibility: hidden;
 }
 
 #header .main-content {
