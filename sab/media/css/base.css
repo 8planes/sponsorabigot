@@ -141,6 +141,11 @@ a.link:hover {
    padding-top: 24px;
 }
 
+#footer .follow-links {
+   float: left;
+   margin-top: 3px;
+}
+
 #headerright {
    float: right;
    margin-top: -4px;
@@ -181,4 +186,38 @@ a.twitter:hover {
 
 a.share span {
    visibility: hidden;
+}
+
+.follow-links p {
+   line-height: 33px;
+   float: left;
+   margin: 0 6px 0 0;
+   color: #ddd;
+   font-size: 14px;
+}
+
+.follow-links a {
+   text-decoration: none;
+   height: 33px;
+   float: left;
+   margin: 0 0 0 4px;
+   background: url('../images/fb-twitter-smaller.png') no-repeat;
+}
+
+.follow-links .tw {
+   width: 39px;
+   background-position: -36px top;
+}
+
+.follow-links .fb {
+   width: 33px;
+   background-position: left top;
+}
+
+.follow-links .tw:hover {
+   background-position: -36px -33px;
+}
+
+.follow-links .fb:hover {
+   background-position: left -33px;
 }

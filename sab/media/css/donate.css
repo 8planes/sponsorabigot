@@ -88,20 +88,12 @@ div.errormsg div {
    margin-top: 30px;
 }
 
-#fb-follow {
-   width: 190px;
+#rightside .follow-links p {
+   margin: 0 6px 0 0;
+   color: #8A8A89;
+   font-size: 16px;
 }
 
-#tw-follow {
-   float: right;
-   margin-top: 10px;
-   display: block;
-   width: 200px;
-   height: 37px;
-   text-decoration: none;
-   background: url('../images/twitter_logo.png') no-repeat;
-}
-
-#tw-follow span {
-   visibility: hidden;
+#rightside .spacer {
+   line-height: 33px;
 }
